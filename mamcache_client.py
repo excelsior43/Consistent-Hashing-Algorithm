@@ -13,8 +13,7 @@ class MemcacheClient(memcache.Client):
     """ A memcache subclass. It currently allows you to add a new host at run
     time. 
 
-    Sadly, this truely messes with the our keys. I.E. Adding a host at runtime
-    effectively wipes our cache all together...Wonder why?
+    only 1/N th cache is wiped out, where N is the number of cache servers.
     """
     def __init__(self, *args, **kwargs):
         super(MemcacheClient, self).__init__(*args, **kwargs)
