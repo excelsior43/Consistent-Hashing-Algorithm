@@ -13,7 +13,7 @@ RESTful API on the concepts of HATEOAS - hypermedia as the engine of application
 
 
 3. Programming :  
-    1.  I have used continuous hashing algorithm. Please download this repository file. The lost keys are 1/n of the total number of keys. This means the successful key fetch will be 6/7 *100 around <strong>85% <strong>.
+    1.  I have used Consistent hashing algorithm. Please download this repository file. The lost keys are 1/n of the total number of keys. This means the successful key fetch will be 6/7 *100 around <strong>85% <strong>.
 ```
 $ [sudo] python mamcache_client.py
 ```
