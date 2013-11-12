@@ -1,9 +1,9 @@
-dub
-===
+dubizzle assigment
+==================
 
 1. Performance :
   Things that enhance the performance of any website :
-    1.  Use a good event ased webserver, rather that a thread based.
+    1.  Use a good event based webserver, rather that a thread based.
     2.  Ensure data is properly cached
     3.  Denormalization of data. No need to have complex db operations, it consumes time.
 
@@ -17,7 +17,7 @@ RESTful API on the concepts of HATEOAS - hypermedia as the engine of application
 ```
 $ [sudo] python mamcache_client.py
 ```
-    2.  Here is the sample function to generate random 7. Please scroll down to find it.
+    2.  Here is the sample function to generate random of 7. 
 ```python
 """ Generating random number between 1..7 
 when rand_5() is available """
