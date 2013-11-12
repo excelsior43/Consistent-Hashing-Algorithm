@@ -1,5 +1,5 @@
-Dubizzle assigment
-==================
+Assigment
+==========
 
 1. Performance :
   Things that enhance the performance of any website :
