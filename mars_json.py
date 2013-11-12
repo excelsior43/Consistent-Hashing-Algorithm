@@ -8,8 +8,11 @@ class Mars(object):
   read(): reads json from a file
   '''
   def __init__(self, fileName="jsonFile.json"):
-    ''' This function take a file name as an arguement '''
+    ''' This function take a file name as an arguement 
+    This method truncates the initialized file'''
     self.fileName = fileName
+    with io.open('jsonFile.json', 'w', encoding='utf-8') as f:
+        f.truncate()
 
   def send(self, data):
     ''' take a dictionary as arguement and writes it to the file
