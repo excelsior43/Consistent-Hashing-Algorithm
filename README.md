@@ -14,10 +14,10 @@ RESTful API on the concepts of HATEOAS - hypermedia as the engine of application
 
 3. Programming)
     a) I have used continuous hashing algorithm. 
-    b) <CODE>def rand_7():
-        q = 0
-        for i in xrange(7):  q+= rand_5()
-        return q%7 + 1 </CODE>
+    b) <CODE>def rand_7(): <br>
+        <tab>q = 0<br>
+        <tab>for i in xrange(7):  q+= rand_5()<br>
+        <tab>return q%7 + 1 </CODE>
 
  
       
