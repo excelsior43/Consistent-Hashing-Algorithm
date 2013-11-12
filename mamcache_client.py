@@ -18,9 +18,7 @@ class MemcacheClient(memcache.Client):
     """
     def __init__(self, *args, **kwargs):
         super(MemcacheClient, self).__init__(*args, **kwargs)
-        
-        
-        
+
     def _get_server(self, key):
         """ Current implementation of Memcache client"""
         for i in range(memcache.Client._SERVER_RETRIES):
