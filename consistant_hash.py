@@ -40,7 +40,7 @@ class ConsistentHash:
     return hash_tuples
     
   def add_machine(self,server,siz):
-    '''This mathod adds a new machine. Then it updates the server hash
+    '''This method adds a new machine. Then it updates the server hash
      in the continuum circle '''
     newPoints=[(siz,k,my_hash(str(siz)+"_"+str(k))) \
                    for k in range(self.num_replicas*server.weight)]
