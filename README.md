@@ -14,7 +14,7 @@ RESTful API on the concepts of HATEOAS - hypermedia as the engine of application
 
 3. Programming : 
     1.  I have used continuous hashing algorithm. 
-    2.  Here is the sample function to generate random 7
+    2.  Here is the sample function to generate random 7. Please scroll down to find it.
     3.  Please fine the source in this repository
 
 
