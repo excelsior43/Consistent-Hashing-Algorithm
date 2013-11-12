@@ -7,7 +7,7 @@ of replications. In this scenario I used 15 replications.
 import random
 import string
 import memcache 
-from consistant_hash import ConsistentHash
+from consistent_hash import ConsistentHash
 
 class MemcacheClient(memcache.Client):
     """ A memcache subclass. It currently allows you to add a new host at run
@@ -28,12 +28,12 @@ class MemcacheClient(memcache.Client):
         
     def set_servers(self, servers):
         ret=super(MemcacheClient, self).set_servers(servers)
-        self.consistant_hash=ConsistentHash(servers=self.servers)
+        self.consistent_hash=ConsistentHash(servers=self.servers)
         return ret
    
     def get_server_index(self,key):
         '''Returns the number of the machine which key gets sent to.'''
-        return self.consistant_hash.get_machine(key)
+        return self.consistent_hash.get_machine(key)
         
 
     def add_server(self, server):
@@ -49,7 +49,7 @@ class MemcacheClient(memcache.Client):
         self.servers.append(server)
         # Update our buckets
         self.buckets.append(server)
-        self.consistant_hash.add_machine(server,len(self.servers)-1)
+        self.consistent_hash.add_machine(server,len(self.servers)-1)
 
 def random_key(size):
     """ Generates a random key
