@@ -15,9 +15,12 @@ RESTful API on the concepts of HATEOAS - hypermedia as the engine of application
 3. Programming : 
     1.  I have used continuous hashing algorithm. 
     2.  Here is the sample function to generate random 7
+    3.  Please fine the source in this repository
 
 
 ```python
+""" Generating random number between 1..7 
+when rand_5() is available """
 define rand_7() :
   q = 0
   for i in xrange(7):  
