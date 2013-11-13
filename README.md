@@ -37,6 +37,9 @@ $ [sudo] python mars_json.py
 $ [sudo] python test_mars.py
 ```
 
+Reference for consistent-hashing code :
+<br><sub>
+[1] <b>Michael Nielsen's blog</b>, http://michaelnielsen.org/blog/consistent-hashing/ </sub>
 
 
 
