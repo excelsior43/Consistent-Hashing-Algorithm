@@ -13,7 +13,7 @@ RESTful API on the concepts of HATEOAS - hypermedia as the engine of application
 
 
 3. Programming :  
-    1.  I have used Consistent hashing algorithm. The lost keys are 1/n of the total number of keys. This means the successful key fetch will be 6/7 *100 around 85%. <br>Please download this repository and run the following command.
+    1.  I have used Consistent hashing algorithm<sup>[1]</sup>. Kindly find the reference to the consistent hash code here : http://michaelnielsen.org/blog/consistent-hashing/ The lost keys are 1/n of the total number of keys. This means the successful key fetch will be 6/7 *100 around 85%. <br>Please download this repository and run the following command.
 ```
 $ [sudo] python mamcache_client.py
 ```
@@ -37,7 +37,7 @@ $ [sudo] python mars_json.py
 $ [sudo] python test_mars.py
 ```
 
-Reference for consistent-hashing code :
+<u>Reference for consistent-hashing code :</u>
 <br><sub>
 [1] <b>Michael Nielsen's blog</b>, http://michaelnielsen.org/blog/consistent-hashing/ </sub>
 
