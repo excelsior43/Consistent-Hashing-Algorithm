@@ -61,7 +61,7 @@ if __name__ == '__main__':
     # We have 7 running memcached servers
     servers = ['127.0.0.1:1121%d' % i for i in range(1,8)]
     # We have 100 keys to split across our servers
-    keys = [random_key(10) for i in range(10000)]
+    keys = [random_key(10) for i in range(100)]
     # Init our subclass
     client = MemcacheClient(replicas=15,servers=servers)
     # Distribute the keys on our servers
