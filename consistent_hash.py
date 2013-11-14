@@ -1,4 +1,4 @@
-'''consistent_hashing.py is a simple demonstration of consistent
+'''cxxxxxxxxxx_hashing.py is a simple demonstration of cxxxxxxxxxx
 hashing.'''
 
 import bisect
@@ -11,7 +11,7 @@ class ConsistentHash:
   server points spread across it. When we add a new server, 1/n of the total
   cache keys will be lost. 
   
-  ConsistentHash(n,r) creates a consistent hash object for a 
+  CxxxxxxxxxxHash(n,r) creates a cxxxxxxxxxx hash object for a 
   cluster of size n, using r replicas. 
 
   It has three attributes. num_machines and num_replics are
@@ -24,15 +24,14 @@ class ConsistentHash:
   The class has a single instance method, get_machine(key), which
   returns the number of the machine to which key should be 
   mapped.'''
-
-  def __init__(self,num_machines=1,num_replicas=15,servers=None):
-    self.num_machines = num_machines
-    self.num_replicas = num_replicas
+  def __init__(self,replicas=1):
+      self.num_replicas = replicas
+      
+  def setup_servers(self,servers=None):
     hash_tuples = [(index,k,my_hash(str(index)+"_"+str(k))) \
                for index,server in enumerate(servers)
-               for k in range(int(num_replicas) * int(server.weight)) ]
+               for k in range(int(self.num_replicas) * int(server.weight)) ]
     self.hash_tuples=self.sort(hash_tuples);
-
   
   def sort(self,hash_tuples):
     '''Sort the hash tuples based on just the hash values   '''
@@ -46,6 +45,8 @@ class ConsistentHash:
                    for k in range(self.num_replicas*server.weight)]
     self.hash_tuples.extend(newPoints)
     self.hash_tuples=self.sort(self.hash_tuples);
+    
+    
     
   def get_machine(self,key):
     '''Returns the number of the machine which key gets sent to.'''
