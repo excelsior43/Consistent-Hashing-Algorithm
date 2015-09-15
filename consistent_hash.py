@@ -1,4 +1,4 @@
-'''cxxxxxxxxxx_hashing.py is a simple demonstration of cxxxxxxxxxx
+'''consistent_hashing.py is a simple demonstration of consistent
 hashing.'''
 
 import bisect
@@ -11,7 +11,7 @@ class ConsistentHash:
   server points spread across it. When we add a new server, 1/n of the total
   cache keys will be lost. 
   
-  CxxxxxxxxxxHash(n,r) creates a cxxxxxxxxxx hash object for a 
+  consistentHash(n,r) creates a consistent hash object for a 
   cluster of size n, using r replicas. 
 
   It has three attributes. num_machines and num_replics are
